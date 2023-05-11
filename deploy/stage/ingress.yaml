@@ -9,7 +9,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: "podinfo.local"
+    - host: "podinfo.stage"
       http:
         paths:
           - pathType: Prefix

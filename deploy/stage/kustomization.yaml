@@ -1,5 +1,5 @@
 namespace: default
 resources:
-  - ../base/helm-repo.yaml
+  - ../helm-repo.yaml
   - podinfo-helm.yaml
   - sync.yaml
