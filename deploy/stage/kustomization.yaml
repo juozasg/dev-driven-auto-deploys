@@ -3,3 +3,4 @@ resources:
   - ../base
   - podinfo-helmrelease.yaml
   - sync.yaml
+  - ingress.yaml
