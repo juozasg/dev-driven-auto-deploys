@@ -16,7 +16,7 @@ helm upgrade -i ingress-nginx ingress-nginx/ingress-nginx \
 # k apply -f kind-ingress-nginx-deploy.yaml
 
 # install podinfo
-k apply -k flagger-podinfo
+# k apply -k podinfo
 
 # install flagger
 helm repo add flagger https://flagger.app
@@ -31,13 +31,11 @@ helm upgrade -i flagger-loadtester flagger/loadtester
 
 # canary and patch ingress
 k apply -f canary.yaml
-k apply -f ingress.yaml
+k apply -f ingress.yam
 
-# bump version
-k delete canary/podinfo
-k apply -f canary.yaml
+
 k set image deployment/podinfo \
-    podinfod=ghcr.io/stefanprodan/podinfo:6.0.4
+    podinfod=ghcr.io/stefanprodan/podinfo:6.0.1
 
 k delete canary/podinfo
 k apply -f canary.yaml
