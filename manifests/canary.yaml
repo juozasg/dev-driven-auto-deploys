@@ -46,7 +46,7 @@ spec:
       # percentage (0-100)
       thresholdRange:
         min: 99
-      interval: 20s
+      interval: 10s
     # # testing (optional)
     webhooks:
       - name: acceptance-test
