@@ -47,7 +47,7 @@ spec:
         - --level=info
         - --random-delay=false
         - --random-error=false
-        - --ui-message="Staging Again!"
+        - --ui-message="Staging (with GitOps)"
         livenessProbe:
           exec:
             command:
