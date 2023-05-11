@@ -47,10 +47,7 @@ spec:
         - --level=info
         - --random-delay=false
         - --random-error=false
-        - --message="staging"
-        env:
-        - name: PODINFO_UI_COLOR
-          value: "#34577c"
+        - --ui-message="Staging Again!"
         livenessProbe:
           exec:
             command:
